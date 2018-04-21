@@ -9,6 +9,15 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    display: block;
 }
 .body{
     width: 100%;
@@ -45,22 +54,27 @@ html, body {
     right: 0;
     z-index: 999;
 }
+#map {
+    height: 400px;
+    width: 100%;
+}
 .purple{
     font-size: 25px;
     text-transform: uppercase;
     background: $purple;
     color: $white;
-    position: fixed;
     height: 70px;
-    padding: 15px;
+    padding: 17px;
     p{
+        margin: 0;
         margin-left: 30px;
     }
 }
 header{
     position: fixed;
     top: 0;
-    width: 100%;
+    right: 0;
+    left: 0;
     z-index: 999;
 }
 .left{float: left;}
@@ -95,13 +109,8 @@ header{
         top: 70px;
         bottom: 0;
         left: 0;
-        width: 0%;
         z-index: 999;
         transition: 1s;
-    }
-    .green.slow{
-        transition: 1s;
-        width: 80%;
     }
     .white{
         display: block;

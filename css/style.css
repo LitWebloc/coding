@@ -4,14 +4,27 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-/* line 13, ../scss/style.scss */
+/* line 16, ../scss/style.scss */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+/* line 19, ../scss/style.scss */
+body {
+  display: block;
+}
+
+/* line 22, ../scss/style.scss */
 .body {
   width: 100%;
 }
 
-/* line 16, ../scss/style.scss */
+/* line 25, ../scss/style.scss */
 .green {
   background: #37beaf;
   color: white;
@@ -23,7 +36,7 @@ html, body {
   z-index: 999;
 }
 
-/* line 26, ../scss/style.scss */
+/* line 35, ../scss/style.scss */
 .white {
   background: white;
   color: #37beaf;
@@ -31,12 +44,12 @@ html, body {
   height: 100%;
   margin: 70px 40% 0 10%;
 }
-/* line 33, ../scss/style.scss */
+/* line 42, ../scss/style.scss */
 .white text p {
   display: inline-block;
 }
 
-/* line 38, ../scss/style.scss */
+/* line 47, ../scss/style.scss */
 .orange {
   background: #fa895f;
   color: white;
@@ -48,40 +61,47 @@ html, body {
   z-index: 999;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 57, ../scss/style.scss */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* line 61, ../scss/style.scss */
 .purple {
   font-size: 25px;
   text-transform: uppercase;
   background: #727eb2;
   color: white;
-  position: fixed;
   height: 70px;
-  padding: 15px;
+  padding: 17px;
 }
-/* line 56, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 .purple p {
+  margin: 0;
   margin-left: 30px;
 }
 
-/* line 60, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 header {
   position: fixed;
   top: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
   z-index: 999;
 }
 
-/* line 66, ../scss/style.scss */
+/* line 80, ../scss/style.scss */
 .left {
   float: left;
 }
 
-/* line 67, ../scss/style.scss */
+/* line 81, ../scss/style.scss */
 .right {
   float: right;
 }
 
-/* line 68, ../scss/style.scss */
+/* line 82, ../scss/style.scss */
 .menu {
   width: 20px;
   height: 15px;
@@ -90,12 +110,12 @@ header {
   float: left;
   display: none;
 }
-/* line 75, ../scss/style.scss */
+/* line 89, ../scss/style.scss */
 .menu svg g {
   fill: #ff0200;
 }
 
-/* line 79, ../scss/style.scss */
+/* line 93, ../scss/style.scss */
 .back {
   position: fixed;
   bottom: 0;
@@ -108,29 +128,22 @@ header {
 }
 
 @media (max-width: 768px) {
-  /* line 90, ../scss/style.scss */
+  /* line 104, ../scss/style.scss */
   .menu {
     display: inline-block;
   }
 
-  /* line 93, ../scss/style.scss */
+  /* line 107, ../scss/style.scss */
   .green {
     position: fixed;
     top: 70px;
     bottom: 0;
     left: 0;
-    width: 0%;
     z-index: 999;
     transition: 1s;
   }
 
-  /* line 102, ../scss/style.scss */
-  .green.slow {
-    transition: 1s;
-    width: 80%;
-  }
-
-  /* line 106, ../scss/style.scss */
+  /* line 115, ../scss/style.scss */
   .white {
     display: block;
     margin: 0;
@@ -138,7 +151,7 @@ header {
     width: 100%;
   }
 
-  /* line 112, ../scss/style.scss */
+  /* line 121, ../scss/style.scss */
   .orange {
     display: block;
     position: inherit !important;
@@ -147,12 +160,12 @@ header {
     z-index: 0;
   }
 
-  /* line 119, ../scss/style.scss */
+  /* line 128, ../scss/style.scss */
   img.left, img.right {
     float: left;
   }
 
-  /* line 122, ../scss/style.scss */
+  /* line 131, ../scss/style.scss */
   img {
     width: 200px;
     height: auto;
